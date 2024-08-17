@@ -1,4 +1,8 @@
+head{
+  display: block !important ;
+}
 .Apps {
+
   width: 1300px;
   height: 1548px;
   gap: 0px;

@@ -5,7 +5,7 @@ const SearchBar = () => {
 
     const[Data,setData]=useState([])
     const[searchTerm,setSerchTerm]=useState(" ")
-    
+    const[filterData,setFilterData]=useState([])
     useEffect(()=>{
       const fechdata=async() => {
   try {
@@ -13,6 +13,7 @@ const SearchBar = () => {
           const data= await response.json()
           console.log(data)
          setData(data)
+         setFilterData(data)
   } catch (error){
     console.error('Error fetching data:', error);
   }
@@ -21,17 +22,19 @@ const SearchBar = () => {
     },[])
   
     const handleSearch = () => {
-      return Data.filter(coin =>
+
+      let demo= Data.filter(coin =>
         coin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
       );
+      setFilterData(demo)
     };
     
      
-  
-  
-    const filteredData = handleSearch();
-  return (
+useEffect(()=>{
+handleSearch()
+},[searchTerm])
+  return ( 
     
         
     <div className="App">
@@ -57,7 +60,7 @@ const SearchBar = () => {
           </tr>
         </thead>
         <tbody>
-        {filteredData.map((coin) => (
+        {filterData.map((coin) => (
             <tr key={coin.id}>
               <td><img src={coin.image} alt={coin.name} width="30" /></td>
               <td>{coin.name}</td>

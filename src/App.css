@@ -1,20 +1,16 @@
 .Apps {
   width: 1300px;
   height: 1548px;
-  top: -741px;
-  left: -1149px;
   gap: 0px;
   opacity: 0px;
   background: #1A1A1C;
   margin-left: 50px;
-
+  display: block !important;
 }
 
 .searchbar{
   width: 986px;
 height: 79px;
-top: -556px;
-left: -715px;
 gap: 0px;
 border: 2px 0px 0px 0px;
 opacity: 0px;
@@ -26,8 +22,6 @@ margin-top: 40px;
   width: 200px;
 height: 79px;
 margin-top: 40px;
-top: -556px;
-left: -715px;
 gap: 0px;
 border: 2px 0px 0px 0px;
 opacity: 0px;
@@ -35,8 +29,7 @@ border: 2px solid #8E8E8E
 
 }
 .btn2{
-  top: -556px;
-  left: -715px;
+
   gap: 0px;
   border: 2px 0px 0px 0px;
   opacity: 0px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import {useEffect, useState } from 'react';
 import  "../App.css"
+
 const SearchBar = () => {
 
     const[Data,setData]=useState([])
@@ -37,7 +38,7 @@ handleSearch()
   return ( 
     
         
-    <div className="App">
+    <div className="Apps">
     <div style={{marginTop:"20px",marginLeft:"20px",marginRight:"20px",justifyContent:"space-evenly",display:"flex",gap:"5px"}}>
    <input type='text' placeholder='Search By Name or Symbol ' className="searchbar" 
    value={searchTerm} onChange={(e)=>setSerchTerm(e.target.value)}
